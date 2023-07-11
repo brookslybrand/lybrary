@@ -2,6 +2,8 @@
 module.exports = {
   ignoredRouteFiles: ["**/.*"],
   serverModuleFormat: "cjs",
+  cacheDirectory: "./node_modules/.cache/remix",
+  tailwind: true,
   future: {
     v2_dev: true,
     v2_errorBoundary: true,
@@ -10,5 +12,4 @@ module.exports = {
     v2_normalizeFormMethod: true,
     v2_routeConvention: true,
   },
-  tailwind: true,
 };
