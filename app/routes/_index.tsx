@@ -1,11 +1,16 @@
 import type { V2_MetaFunction } from '@remix-run/node';
+import type { RequiredVariantProps } from '~/types';
 import { Link } from '@remix-run/react';
-import { clsx } from 'clsx';
+import { cva } from 'class-variance-authority';
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: 'New Remix App' },
-    { name: 'description', content: 'Welcome to Remix!' },
+    { title: 'The Lybrary | Lybrand Digital Board Game Library' },
+    {
+      name: 'description',
+      content:
+        "Welcome the digital library of the Lybrand's ever expanding board game collection",
+    },
   ];
 };
 
@@ -21,10 +26,10 @@ export default function Index() {
           collection
         </p>
         <div className="mt-8 w-full space-y-8 lg:mt-12 lg:space-y-14">
-          <CallToAction to="pick-a-game" color="primary">
+          <CallToAction to="pick-a-game" intent="primary">
             Pick a game
           </CallToAction>
-          <CallToAction to="library" color="secondary">
+          <CallToAction to="library" intent="secondary">
             Browse library
           </CallToAction>
         </div>
@@ -33,24 +38,31 @@ export default function Index() {
   );
 }
 
+const callToActionVariants = cva(
+  'flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-lg font-normal leading-8 focus:outline-none focus:ring-2 focus:ring-offset-2 lg:text-2xl lg:font-light lg:leading-10',
+  {
+    variants: {
+      intent: {
+        primary:
+          'bg-teal-700 text-slate-50 hover:bg-teal-800 focus:ring-teal-600',
+        secondary:
+          'bg-fuchsia-700 text-slate-50 hover:bg-fuchsia-800 focus:ring-fuchsia-600',
+      },
+    },
+    defaultVariants: {
+      intent: 'primary',
+    },
+  },
+);
+
 type CallToActionProps = {
   to: string;
-  color: 'primary' | 'secondary';
   children: React.ReactNode;
-};
+} & RequiredVariantProps<typeof callToActionVariants>;
 
-function CallToAction({ to, color, children }: CallToActionProps) {
+function CallToAction({ to, intent, children }: CallToActionProps) {
   return (
-    <Link
-      to={to}
-      className={clsx(
-        'flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-lg font-normal leading-8 focus:outline-none focus:ring-2 focus:ring-offset-2 lg:text-2xl lg:font-light lg:leading-10',
-        color === 'primary' &&
-          'bg-teal-700 text-slate-50 hover:bg-teal-800 focus:ring-teal-600',
-        color === 'secondary' &&
-          'bg-fuchsia-700 text-slate-50 hover:bg-fuchsia-800 focus:ring-fuchsia-600',
-      )}
-    >
+    <Link to={to} className={callToActionVariants({ intent })}>
       {children}
     </Link>
   );

@@ -1,9 +1,9 @@
 import { Fragment, useState } from 'react';
 import { Link } from '@remix-run/react';
 import { UserIcon } from '@heroicons/react/20/solid';
-import { clsx } from 'clsx';
 
 import { Menu, Transition } from '@headlessui/react';
+import { cx } from 'class-variance-authority';
 
 const avatarFocusCss =
   'flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800';
@@ -19,7 +19,7 @@ export function Header() {
           <button onClick={() => setIsLoggedIn((p) => !p)}>Toggle</button>
           {isLoggedIn ? (
             <Menu as="div">
-              <Menu.Button className={clsx('bg-gray-800', avatarFocusCss)}>
+              <Menu.Button className={cx('bg-gray-800', avatarFocusCss)}>
                 <span className="sr-only">Open user menu</span>
                 <img
                   className="h-8 w-8 rounded-full"
@@ -41,7 +41,7 @@ export function Header() {
                     {({ active }) => (
                       <Link
                         to="#"
-                        className={clsx(
+                        className={cx(
                           active ? 'bg-gray-100' : '',
                           'block px-4 py-2 text-sm text-gray-700',
                         )}
@@ -54,7 +54,7 @@ export function Header() {
                     {({ active }) => (
                       <Link
                         to="#"
-                        className={clsx(
+                        className={cx(
                           active ? 'bg-gray-100' : '',
                           'block px-4 py-2 text-sm text-gray-700',
                         )}
@@ -67,7 +67,7 @@ export function Header() {
                     {({ active }) => (
                       <Link
                         to="#"
-                        className={clsx(
+                        className={cx(
                           active ? 'bg-gray-100' : '',
                           'block px-4 py-2 text-sm text-gray-700',
                         )}
@@ -82,7 +82,7 @@ export function Header() {
           ) : (
             <Link
               to="login"
-              className={clsx(
+              className={cx(
                 'text-gray-600 ring-1 ring-gray-600/40 ',
                 avatarFocusCss,
               )}
