@@ -20,12 +20,24 @@ FROM base as build
 RUN apt-get update -qq && \
     apt-get install -y python-is-python3 pkg-config build-essential 
 
+
+
 # Install node modules
 COPY --link package.json package-lock.json .
 RUN npm install --production=false
 
 # Copy application code
 COPY --link . .
+
+
+# Install LiteFS dependencies
+RUN apt-get update -y && apt-get install -y ca-certificates fuse3 sqlite3
+
+# Copy in the LiteFS binary
+COPY --from=flyio/litefs:0.5 /usr/local/bin/litefs /usr/local/bin/litefs
+
+ENTRYPOINT litefs mount
+
 
 # Build application
 RUN npm run build
