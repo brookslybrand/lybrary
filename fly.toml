@@ -16,8 +16,8 @@ kill_timeout = "5s"
   PRIMARY_REGION = "dfw"
 
 [mounts]
-  source = "litefs"
-  destination = "/var/lib/litefs"
+  source = "data"
+  destination = "/data"
 
 [[services]]
   protocol = "tcp"
