@@ -1,5 +1,5 @@
 import type { User } from '@prisma/client';
-import { prisma } from '~/utils/db.server';
+import { prisma } from '~/utils/db.server.ts';
 
 const user: User = {
   id: 1,
