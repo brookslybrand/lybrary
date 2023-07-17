@@ -1,7 +1,8 @@
-import type { V2_MetaFunction } from '@remix-run/node';
+import { json, type V2_MetaFunction } from '@remix-run/node';
 import type { RequiredVariantProps } from '~/types.ts';
-import { Link } from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import { cva } from 'class-variance-authority';
+import { prisma } from '~/utils/db.server.ts';
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -14,7 +15,14 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 
+export async function loader() {
+  const users = await prisma.user.findMany();
+  return json({ users });
+}
+
 export default function Index() {
+  const { users } = useLoaderData<typeof loader>();
+  console.log(users);
   return (
     <div className="px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto flex max-w-md flex-col items-center text-center lg:max-w-fit">
@@ -34,6 +42,15 @@ export default function Index() {
           </CallToAction>
         </div>
       </div>
+      {users.length ? (
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </ul>
+      ) : (
+        <div>There were no users</div>
+      )}
     </div>
   );
 }
