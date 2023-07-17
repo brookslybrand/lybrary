@@ -1,5 +1,5 @@
 import type { V2_MetaFunction } from '@remix-run/node';
-import type { RequiredVariantProps } from '~/types';
+import type { RequiredVariantProps } from '~/types.ts';
 import { Link } from '@remix-run/react';
 import { cva } from 'class-variance-authority';
 
