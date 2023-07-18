@@ -26,10 +26,24 @@ export default function Index() {
   return (
     <div className="px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto flex max-w-md flex-col items-center text-center lg:max-w-fit">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          The Lybrary
+        <h1 className="mb-8 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          Users
         </h1>
-        <p className="mt-6 text-base leading-8 text-gray-600 lg:mt-8 lg:text-lg">
+        {users.length ? (
+          <ul>
+            {users.map((user) => (
+              <li className="text-xl" key={user.id}>
+                {user.name}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div>There were no users</div>
+        )}
+        {/* <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          The Lybrary
+        </h1> */}
+        {/* <p className="mt-6 text-base leading-8 text-gray-600 lg:mt-8 lg:text-lg">
           The digital library of the Lybrand's ever expanding board game
           collection
         </p>
@@ -40,17 +54,8 @@ export default function Index() {
           <CallToAction to="library" intent="secondary">
             Browse library
           </CallToAction>
-        </div>
+        </div> */}
       </div>
-      {users.length ? (
-        <ul>
-          {users.map((user) => (
-            <li key={user.id}>{user.name}</li>
-          ))}
-        </ul>
-      ) : (
-        <div>There were no users</div>
-      )}
     </div>
   );
 }
