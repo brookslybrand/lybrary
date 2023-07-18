@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { json, type V2_MetaFunction } from '@remix-run/node';
 import type { RequiredVariantProps } from '~/types.ts';
 import { Link, useLoaderData } from '@remix-run/react';
