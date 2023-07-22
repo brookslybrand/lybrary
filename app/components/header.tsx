@@ -1,16 +1,16 @@
-import { Fragment, useState } from 'react';
-import { Link } from '@remix-run/react';
-import { UserIcon } from '@heroicons/react/20/solid';
+import { Fragment, useState } from 'react'
+import { Link } from '@remix-run/react'
+import { UserIcon } from '@heroicons/react/20/solid'
 
-import { Menu, Transition } from '@headlessui/react';
-import { cx } from 'class-variance-authority';
+import { Menu, Transition } from '@headlessui/react'
+import { cx } from 'class-variance-authority'
 
 const avatarFocusCss =
-  'flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800';
+  'flex rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
 
 export function Header() {
   // TODO: hook up logic
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-slate-700/10 bg-gradient-to-tl from-teal-50/80 to-teal-300/50">
@@ -94,5 +94,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  );
+  )
 }

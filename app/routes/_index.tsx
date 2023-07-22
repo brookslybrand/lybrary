@@ -1,7 +1,7 @@
-import type { V2_MetaFunction } from '@remix-run/node';
-import type { RequiredVariantProps } from '~/types.ts';
-import { Link } from '@remix-run/react';
-import { cva } from 'class-variance-authority';
+import type { V2_MetaFunction } from '@remix-run/node'
+import type { RequiredVariantProps } from '~/types.ts'
+import { Link } from '@remix-run/react'
+import { cva } from 'class-variance-authority'
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -11,8 +11,8 @@ export const meta: V2_MetaFunction = () => {
       content:
         "Welcome the digital library of the Lybrand's ever expanding board game collection",
     },
-  ];
-};
+  ]
+}
 
 export default function Index() {
   return (
@@ -35,7 +35,7 @@ export default function Index() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 const callToActionVariants = cva(
@@ -53,17 +53,17 @@ const callToActionVariants = cva(
       intent: 'primary',
     },
   },
-);
+)
 
 type CallToActionProps = {
-  to: string;
-  children: React.ReactNode;
-} & RequiredVariantProps<typeof callToActionVariants>;
+  to: string
+  children: React.ReactNode
+} & RequiredVariantProps<typeof callToActionVariants>
 
 function CallToAction({ to, intent, children }: CallToActionProps) {
   return (
     <Link to={to} className={callToActionVariants({ intent })}>
       {children}
     </Link>
-  );
+  )
 }

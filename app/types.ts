@@ -1,5 +1,5 @@
-import type { VariantProps } from 'class-variance-authority';
-import type { Simplify } from 'type-fest';
+import type { VariantProps } from 'class-variance-authority'
+import type { Simplify } from 'type-fest'
 
 export type RequiredVariantProps<
   T extends (...args: any) => any,
@@ -9,6 +9,6 @@ export type RequiredVariantProps<
   // Create an intersection of all variants with those being marked as required
   VariantProps<T> & {
     // For each variant being marked as required, remove null and undefined
-    [Variant in Keys]: Exclude<VariantProps<T>[Variant], null | undefined>;
+    [Variant in Keys]: Exclude<VariantProps<T>[Variant], null | undefined>
   }
->;
+>

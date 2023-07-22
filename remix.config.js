@@ -13,4 +13,4 @@ export default {
     v2_normalizeFormMethod: true,
     v2_routeConvention: true,
   },
-};
+}

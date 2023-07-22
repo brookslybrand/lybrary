@@ -1,5 +1,5 @@
-import defaultTheme from 'tailwindcss/defaultTheme.js';
-import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme.js'
+import type { Config } from 'tailwindcss'
 
 export default {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
@@ -11,4 +11,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config
