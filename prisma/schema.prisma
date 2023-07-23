@@ -11,7 +11,65 @@ datasource db {
 }
 
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reviews   Review[]
+}
+
+// Board games! The bread and butter of this app
+model BoardGame {
+  id          String                   @id @default(uuid())
+  name        String                   @unique
+  description String?
+  createdAt   DateTime                 @default(now())
+  updatedAt   DateTime                 @updatedAt
+  reviews     Review[]
+  categories  CategoriesOnBoardGames[]
+  plays       Play[]
+  // TODO: Add images
+}
+
+// A record of a game played
+model Play {
+  id              String    @id @default(uuid())
+  boardGame       BoardGame @relation(fields: [boardGameId], references: [id])
+  boardGameId     String
+  // TODO: think about marking actual people who played
+  numberOfPlayers Int
+  startTime       DateTime
+  endTime         DateTime
+}
+
+// Reviews are submitted by friends, it allows them to say how much they enjoy the game, and any other thoughts they have about it
+model Review {
+  id          String     @id @default(uuid())
+  rating      Int
+  comment     String?
+  isApproved  Boolean
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  boardGame   BoardGame? @relation(fields: [boardGameId], references: [id])
+  boardGameId String?
+  user        User?      @relation(fields: [userId], references: [id])
+  userId      String?
+}
+
+model Category {
+  id          String                   @id @default(uuid())
+  name        String
+  description String
+  boardGames  CategoriesOnBoardGames[]
+  boardGameId String?
+}
+
+model CategoriesOnBoardGames {
+  boardGame   BoardGame @relation(fields: [boardGameId], references: [id])
+  boardGameId String
+  category    Category  @relation(fields: [categoryId], references: [id])
+  categoryId  String
+
+  @@id([boardGameId, categoryId])
 }
