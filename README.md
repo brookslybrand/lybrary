@@ -1,77 +1,96 @@
-# Welcome to React Router!
+# Lybrary
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A digital board game library and ranking system, built to help manage and choose from the Lybrand family's extensive collection of 50+ board games.
 
-## Features
+## Core Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+### Game Catalog
 
-## Getting Started
+- Digital inventory of all board games
+- Detailed game information including:
+  - Player counts (min/max)
+  - Play time (min/max)
+  - Complexity rating (1-5)
+  - Images
+  - Description
+  - Categories/mechanics
 
-### Installation
+### Game Finder
 
-Install the dependencies:
+- Advanced filtering system
+- Filter by:
+  - Number of players
+  - Available time
+  - Desired complexity
+  - Categories/mechanics
 
-```bash
-npm install
-```
+### Game Ranking System
 
-### Development
+- Tournament-style comparison system
+- Head-to-head matchups from filtered game pool
+- Uses [Swiss-system tournament](https://en.wikipedia.org/wiki/Swiss-system_tournament) algorithm
+- Generates ordered list of preferred games
 
-Run an initial database migration:
+## Technical Implementation
 
-```bash
-npm run db:migrate
-```
+### Data Layer
 
-Start the development server with HMR:
+- Cloudflare D1 database (SQLite)
+- Drizzle ORM for type-safe queries
+- Initial data migration from CSV
+- R2 storage for game images
 
-```bash
-npm run dev
-```
+### API & Routing
 
-Your application will be available at `http://localhost:5173`.
+- React Router v7 for client/server routing
+- Cloudflare Workers for API endpoints
+- Type-safe loader/action patterns
 
-## Building for Production
+### Frontend
 
-Create a production build:
+- React components
+- Tailwind CSS for styling
+- Responsive design for mobile/desktop
 
-```bash
-npm run build
-```
+## Development Roadmap
 
-## Deployment
+1. Database Setup
 
-Deployment is done using the Wrangler CLI.
+   - Create Drizzle schema for games table
+   - Write migration for initial CSV data import
+   - Set up R2 bucket for images
 
-To deploy directly to production:
+2. Core Pages
 
-```sh
-npx wrangler deploy
-```
+   - Home page with quick actions
+   - Game details page
+   - Filtered game list
+   - Game comparison/ranking interface
 
-To deploy a preview URL:
+3. Game Finder Implementation
 
-```sh
-npx wrangler versions upload
-```
+   - Filter form component
+   - Real-time filtering
+   - Results display
 
-You can then promote a version to production after verification or roll it out progressively.
+4. Ranking System
+   - Swiss tournament algorithm implementation
+   - Head-to-head comparison UI
+   - Results storage and display
 
-```sh
-npx wrangler versions deploy
-```
+## Future Ideas
 
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+- User accounts for personal rankings
+- Integration with BoardGameGeek API
+- Play history tracking
+- "Game night" planning tool
+- Player count optimizer (best games for X players)
+- Game lending tracker
+- Expansion tracking
+- House rules documentation
+- Setup guides/checklists
+- Quick-reference rules
+- Win/loss statistics
+- Playing time tracker
+- Difficulty progression suggestions
+- Similar game recommendations
