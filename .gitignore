@@ -1,6 +1,7 @@
 .DS_Store
 /node_modules/
 *.tsbuildinfo
+.env
 
 # React Router
 /.react-router/
@@ -9,3 +10,6 @@
 # Cloudflare
 .mf
 .wrangler
+
+# Maybe will remove from gitignore if determined to be safe
+wrangler.toml
