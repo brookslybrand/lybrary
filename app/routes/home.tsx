@@ -1,6 +1,7 @@
 import * as schema from "~/database/schema";
 import type { Route } from "./+types/home";
 import { Form } from "react-router";
+import { database } from "~/modules/db.server";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,6 +11,7 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export async function action({ request, context }: Route.ActionArgs) {
+  const db = database();
   const formData = await request.formData();
   let name = formData.get("name");
   let email = formData.get("email");
@@ -30,14 +32,15 @@ export async function action({ request, context }: Route.ActionArgs) {
   }
 
   try {
-    await context.db.insert(schema.guestBook).values({ name, email, message });
+    await db.insert(schema.guestBook).values({ name, email, message });
   } catch (error) {
     return { guestBookError: "Error adding to guest book" };
   }
 }
 
-export async function loader({ context }: Route.LoaderArgs) {
-  const guestBook = await context.db.query.guestBook.findMany({
+export async function loader() {
+  const db = database();
+  const guestBook = await db.query.guestBook.findMany({
     columns: {
       id: true,
       name: true,
