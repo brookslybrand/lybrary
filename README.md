@@ -57,6 +57,10 @@ A digital board game library and ranking system, built to help manage and choose
 1. Database Setup
 
    - Create Drizzle schema for games table
+     - Add staging and production databases
+     - Add all the db scripts to the repo
+     - Figure out what should be in wrangler.toml
+     - Setup schema properly
    - Write migration for initial CSV data import
    - Set up R2 bucket for images
 
