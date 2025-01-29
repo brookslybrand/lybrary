@@ -7,7 +7,10 @@ import type { Route } from "../+types/root";
 let dbContext = createContext<DrizzleD1Database<typeof schema>>();
 
 export function dbMiddleware({ request, context, next }: Route.MiddlewareArgs) {
-  const db = drizzle(context.cloudflare.env.DB, { schema });
+  const db = drizzle(context.cloudflare.env.DB, {
+    schema,
+    casing: "snake_case",
+  });
   return provide([[dbContext, db]], async () => {
     try {
       let res = (await next()) as Response;

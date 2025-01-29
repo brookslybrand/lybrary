@@ -15,6 +15,27 @@
       "when": 1737513580100,
       "tag": "0001_slow_dormammu",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1738161842802,
+      "tag": "0002_dusty_corsair",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1738162908948,
+      "tag": "0003_eager_moon_knight",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1738163031012,
+      "tag": "0004_natural_klaw",
+      "breakpoints": true
     }
   ]
 }

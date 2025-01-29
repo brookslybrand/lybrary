@@ -13,6 +13,16 @@ export function meta({}: Route.MetaArgs) {
 export async function action({ request, context }: Route.ActionArgs) {
   const db = database();
   const formData = await request.formData();
+
+  if (formData.has("create-user")) {
+    await db.insert(schema.users).values({
+      firstName: "Bobby",
+      email: "bobby@example.com",
+      password: "password",
+    });
+    return { success: "User created" };
+  }
+
   let name = formData.get("name");
   let email = formData.get("email");
   let message = formData.get("message");
@@ -47,8 +57,16 @@ export async function loader() {
     },
   });
 
+  const users = await db.query.users.findMany({
+    columns: {
+      id: true,
+      firstName: true,
+    },
+  });
+
   return {
     guestBook,
+    users,
   };
 }
 
@@ -56,6 +74,12 @@ export default function Home({ actionData, loaderData }: Route.ComponentProps) {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-8">Guest Book</h1>
+
+      <pre>{JSON.stringify(loaderData, null, 2)}</pre>
+
+      <Form method="post">
+        <button name="create-user">Create a user</button>
+      </Form>
 
       <Form method="post" className="mb-8 space-y-4">
         <div>
