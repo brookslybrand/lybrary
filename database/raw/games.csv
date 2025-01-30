@@ -1,0 +1,336 @@
+name,description,min_players,max_players,min_time,max_time,complexity,mechanisms
+Spyfall,A party game of deception where one player is a spy trying to figure out the location while others ask questions to identify the spy without revealing too much information.,3,8,15,15,1,"Acting
+Communication Limits
+Memory
+Role Playing
+Roles with Asymmetric Information
+Targeted Clues
+Traitor Game
+Voting"
+Incan Gold,"A press-your-luck game where players delve deeper into temples to collect treasures, but must decide when to leave before disaster strikes.",3,8,30,30,1,"Move Through Deck
+Push Your Luck
+Score-and-Reset Game
+Simultaneous Action Selection"
+Throw Throw Burrito,"A card game that combines the collecting matching sets with dodgeball, where players throw soft foam burritos at each other during special card combinations.",2,6,15,15,1,"Real-Time
+Set Collection
+Take That"
+Love Letter,A quick card game of deduction and risk-taking where players try to deliver their love letter to the princess while preventing others from doing the same.,2,4,15,20,1,"Deduction
+Hand Management
+Player Elimination
+Score-and-Reset Game
+Take That"
+A Game of Thrones: Hand of the King,,2,4,15,30,1,"Grid Movement
+Open Drafting
+Set Collection"
+Mexican Train,,2,10,20,30,1,Tile Placement
+Monopoly Deal,"A fast-paced card game version of Monopoly where players collect properties, charge rent, and steal from other players to be the first to collect three full property sets.",2,6,15,30,1,"Hand Management
+Set Collection
+Take That"
+Sushi Go!,"A card drafting game where players pass cards around the table, trying to create the best combination of sushi dishes for points.",2,5,15,15,1,"Closed Drafting
+End Game Bonuses
+Hand Management
+Set Collection
+Simultaneous Action Selection"
+Bananagrams,A fast-paced word game where players race to build their own crossword grids using letter tiles.,1,8,15,15,1,"Race
+Real-Time
+Tile Placement"
+Falling: The Goblin Edition,,4,8,5,10,1,Hand Management
+Catan Dice Game,,1,4,15,15,1,"Dice Rolling
+Paper-and-Pencil
+Set Collection
+Solo / Solitaire Game"
+Uno Boom-O,,2,6,20,20,1,"Hand Management
+Player Elimination"
+Farkle,"A classic dice game where players roll six dice and bank points, but risk losing them all if they push their luck too far.",2,6,30,30,1,"Dice Rolling
+Paper-and-Pencil
+Push Your Luck
+Re-rolling and Locking
+Set Collection"
+Rummikub,"A tile-based game combining elements of rummy and mahjong, where players try to be first to play all their numbered tiles in runs or groups.",2,4,45,60,1,"Set Collection
+Tile Placement"
+Trekking the National Parks,,2,6,30,60,2,"Hand Management
+Open Drafting
+Point to Point Movement
+Set Collection"
+Sheriff of Nottingham,"A bluffing and negotiation game where players are merchants trying to bring goods into the city, while one player acts as the Sheriff trying to catch smugglers.",3,5,60,60,2,"Betting and Bluffing
+Bribery
+Hand Management
+Negotiation
+Open Drafting
+Role Playing
+Set Collection"
+Splendor,A Renaissance merchant game where players compete to build the most prestigious jewelry business by collecting gems and attracting noble patrons.,2,4,30,30,2,"Contracts
+Open Drafting
+Race
+Set Collection"
+Carcassonne,"A tile-laying game where players build a medieval landscape of cities, monasteries, roads, and fields, scoring points for completed features.",2,5,30,45,2,"Area Majority / Influence
+Map Addition
+Pattern Recognition
+Tile Placement"
+Planet,,2,4,30,45,2,"Open Drafting
+Tile Placement
+Turn Order: Progressive"
+Abducktion,,2,6,15,30,2,"Hand Management
+Pattern Building"
+Horticulture,,1,10,15,30,2,ConnectionsPaper-and-Pencil
+Next Station: London,,1,4,15,30,2,"Connections
+Line Drawing
+Network and Route Building
+Paper-and-Pencil"
+Kingdomino,,2,4,15,30,2,"Open Drafting
+Tile Placement
+Turn Order: Stat-Based"
+Forbidden Island,A cooperative game where players work together as adventurers to collect sacred treasures from a sinking island before it disappears beneath the waves.,2,4,30,30,2,"Action Points
+Cooperative Game
+Grid Movement
+Hand Management
+Map Reduction
+Modular Board
+Pick-up and Deliver
+Set Collection
+Solo / Solitaire Game
+Square Grid
+Variable Player Powers"
+Patchwork,A two-player game where players compete to build the most aesthetic and high-scoring quilt using tetris-like pieces while managing time and buttons as resources.,2,2,15,30,2,"Grid Coverage
+Income
+Open Drafting
+Rondel
+Square Grid
+Tile Placement
+Turn Order: Stat-Based
+Turn Order: Time Track
+Victory Points as a Resource"
+Munchkin Adventure Time ,,3,6,60,120,2,"Dice Rolling
+Hand Management
+Take That
+Variable Player Powers"
+Condottierre,,2,6,20,45,2,"Area Majority / Influence
+Auction/Bidding
+Constrained Bidding
+Hand Management"
+Not Alone,,2,7,30,45,2,"Deck, Bag, and Pool Building
+Hand Management
+Hidden Movement
+Race
+Simultaneous Action Selection
+Team-Based Game"
+Splendor Duel,,2,2,30,30,2,"Contracts
+Open Drafting
+Race
+Set Collection"
+Bang! The Bullet!,,3,8,20,40,2,"Hand Management
+Hidden Roles
+Player Elimination
+Take That
+Team-Based Game
+Variable Player Powers"
+Secrets,,4,8,15,35,2,"Advantage Token
+Open Drafting
+Push Your Luck
+Tags
+Take That
+Team-Based Game"
+Exploding Kittens: Party Pack,A highly strategic kitty-powered version of Russian Roulette where players draw cards hoping to avoid the exploding kitten cards that will eliminate them from the game.,2,10,15,30,2,"Hand Management
+Player Elimination
+Push Your Luck
+Set Collection
+Take That"
+Set a Watch,,1,4,45,80,2,"Cooperative Game
+Dice Rolling
+Solo / Solitaire Game
+Variable Player Powers"
+Coup,A bluffing game set in a dystopian future where players try to eliminate each other's influence using hidden roles and deception.,2,6,15,15,2,"Hidden Roles
+Memory
+Player Elimination
+Take That
+Variable Player Powers"
+Citadels,A game of city-building and character drafting where players take on new roles each round to collect resources and construct districts in their medieval city.,2,8,20,60,2,"Action Drafting
+Closed Drafting
+Income
+Lose a Turn
+Set Collection
+Take That
+Turn Order: Role Order
+Variable Player Powers"
+Fugitive,,2,2,5,20,2,"Hand Management
+Hidden Movement
+Memory
+Secret Unit Deployment"
+Unstable Unicorns,,2,8,30,45,2,"Hand Management
+Set Collection
+Take That"
+One Deck Dungeon,,1,2,30,30,2,"Cooperative Game
+Deck, Bag, and Pool Building
+Dice Rolling
+Melding and Splaying
+Move Through Deck
+Solo / Solitaire Game
+Stat Check Resolution
+Variable Player Powers"
+Iota,,2,4,30,30,2,"Pattern Building
+Pattern Recognition
+Tile Placement"
+Ticket to Ride: Europe,"A railway-themed game where players collect train cards to build routes connecting cities across Europe, completing destination tickets for points.",2,5,30,60,3,"Connections
+Contracts
+End Game Bonuses
+Hand Management
+Network and Route Building
+Open Drafting
+Push Your Luck
+Set Collection"
+Arctic Scavengers: Base Game+HQ+Recon,,1,5,45,60,3,"Deck, Bag, and Pool Building
+Hand Management
+Open Drafting"
+Dominion,The original deck-building game where players start with a small deck of cards and acquire more powerful cards to build a domain of victory points.,2,4,30,45,3,"Deck, Bag, and Pool Building
+Delayed Purchase
+Hand Management
+Open Drafting
+Take That
+Variable Set-up"
+Valeria: Card Kingdoms,,1,5,45,60,3,"Dice Rolling
+Open Drafting
+Random Production
+Variable Set-up"
+Evolution,"A game where players adapt their species with different traits to survive in a dynamic ecosystem, competing for food while avoiding being eaten by carnivores.",2,6,60,60,3,"Action Points
+Hand Management
+Push Your Luck
+Simulation
+Simultaneous Action Selection
+Take That"
+Quantum,"A sci-fi strategy game where dice represent spaceships with different abilities, used to conquer and colonize a modular galaxy.",2,4,60,60,3,"Area Majority / Influence
+Dice Rolling
+Grid Movement
+Modular Board
+Square Grid"
+Betrayal at House on the Hill,"A horror-themed game where players explore a haunted house until one of them becomes a traitor, triggering one of 50 unique scenarios.",3,6,60,60,3,"Dice Rolling
+Map Addition
+Modular Board
+Player Elimination
+Role Playing
+Storytelling
+Team-Based Game
+Traitor Game
+Variable Player Powers"
+Pandemic,A cooperative game where players work together as disease control specialists to save humanity from four deadly diseases threatening to wipe out different regions of the world.,2,4,45,45,3,"Action Points
+Cooperative Game
+Hand Management
+Point to Point Movement
+Set Collection
+Tags
+Variable Player Powers"
+Catan,"A classic strategy game where players compete to establish the most successful colony on the island of Catan by gathering resources, building settlements, and trading with other players.",2,6,60,120,4,"Chaining
+Dice Rolling
+Hexagon Grid
+Income
+Modular Board
+Negotiation
+Network and Route Building
+Race
+Random Production
+Trading
+Variable Set-up"
+Gloomhaven: Jaws of the Lion,,1,4,60,120,4,"Action Queue
+Action Retrieval
+Campaign / Battle Card Driven
+Communication Limits
+Cooperative Game
+Critical Hits and Failures
+Deck Construction
+Grid Movement
+Hand Management
+Hexagon Grid
+Legacy Game
+Line of Sight
+Multi-Use Cards
+Once-Per-Game Abilities
+Scenario / Mission / Campaign Game
+Simultaneous Action Selection
+Solo / Solitaire Game
+Variable Player Powers"
+Arkham Horror,,1,2,120,240,4,"Cooperative Game
+Dice Rolling
+Events
+Finale Ending
+Hand Management
+Lose a Turn
+Point to Point Movement
+Role Playing
+Solo / Solitaire Game
+Stat Check Resolution
+Variable Player Powers"
+Gloomhaven,A massive dungeon-crawling campaign game where players take on the role of wandering adventurers with their own special abilities and reasons for traveling to this dark corner of the world.,1,4,60,120,4,"Campaign / Battle Card Driven
+Communication Limits
+Cooperative Game
+Deck Construction
+Deck, Bag, and Pool Building
+Grid Movement
+Hand Management
+Hexagon Grid
+Legacy Game
+Modular Board
+Multi-Use Cards
+Once-Per-Game Abilities
+Scenario / Mission / Campaign Game
+Simultaneous Action Selection
+Solo / Solitaire Game
+Variable Player Powers"
+Frosthaven,"The sequel to Gloomhaven, featuring new character classes and scenarios in a frozen northern outpost, with enhanced town-building and seasonal mechanics.",1,4,60,120,4,"Campaign / Battle Card Driven
+Communication Limits
+Cooperative Game
+Deck Construction
+Deck, Bag, and Pool Building
+Grid Movement
+Hand Management
+Hexagon Grid
+Legacy Game
+Modular Board
+Multi-Use Cards
+Once-Per-Game Abilities
+Scenario / Mission / Campaign Game
+Simultaneous Action Selection
+Solo / Solitaire Game
+Variable Player Powers"
+Terra Mystica,A complex strategy game where fantasy races terraform the landscape and build structures to develop their civilization while competing for power and territory.,2,5,60,150,5,"Area Majority / Influence
+Chaining
+End Game Bonuses
+Hexagon Grid
+Income
+Increase Value of Unchosen Resources
+Network and Route Building
+Tech Trees / Tech Tracks
+Turn Order: Pass Order
+Variable Player Powers
+Variable Set-up
+Victory Points as a Resource
+Worker Placement, Different Worker Types"
+Twilight Struggle,"A card-driven game simulating the Cold War between the USA and USSR, where players compete for global influence through political, military, and economic means.",2,2,120,180,5,"Action/Event
+Advantage Token
+Area Majority / Influence
+Campaign / Battle Card Driven
+Dice Rolling
+Events
+Hand Management
+Simulation
+Simultaneous Action Selection
+Sudden Death Ending
+Tug of War
+Variable Set-up"
+Root,An asymmetric game set in a woodland realm where different animal factions with unique abilities and victory conditions compete for control of the forest.,2,4,60,90,5,"Action Queue
+Action Retrieval
+Area Majority / Influence
+Area Movement
+Dice Rolling
+Hand Management
+Point to Point Movement
+Race
+Sudden Death Ending
+Variable Player Powers
+Variable Set-up"
+Cyclades,An auction-based game set in ancient Greece where players bid for the favor of the gods to build metropolises through warfare and mythological creatures.,2,5,60,90,?,"Area Majority / Influence
+Area Movement
+Auction: Fixed Placement
+Auction/Bidding
+Dice Rolling
+Open Drafting
+Set Collection
+Variable Phase Order"
