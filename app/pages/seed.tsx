@@ -132,7 +132,7 @@ export default function SeedRoute({
   return (
     <div className="p-4">
       {actionData?.message && (
-        <div className="mb-4 p-4 bg-green-100 text-green-800 rounded">
+        <div className="mb-4 p-4 bg-green-100 text-green-800 rounded-sm">
           {actionData.message}
         </div>
       )}
@@ -146,7 +146,7 @@ export default function SeedRoute({
         <Form method="post">
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-sm"
           >
             Seed Games
           </button>
@@ -157,7 +157,7 @@ export default function SeedRoute({
         {games.map((game) => (
           <div
             key={game.id}
-            className="border p-4 rounded shadow hover:shadow-md"
+            className="border p-4 rounded-sm shadow-sm hover:shadow-md"
           >
             <h2 className="text-xl font-semibold">{game.name}</h2>
             {game.description && (
