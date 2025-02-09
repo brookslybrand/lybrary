@@ -5,10 +5,10 @@
   "scripts": {
     "build": "react-router build",
     "db:generate": "dotenv -- drizzle-kit generate",
-    "db:studio": "dotenv -- drizzle-kit studio",
+    "db:studio:prod": "dotenv -- drizzle-kit studio",
     "db:studio:local": "LOCAL_DB_PATH=$(find .wrangler/state/v3/d1/miniflare-D1DatabaseObject -type f -name '*.sqlite' | sort | tail -1) drizzle-kit studio",
     "db:migrate:local": "wrangler d1 migrations apply --local DB",
-    "db:migrate:production": "dotenv -- drizzle-kit migrate",
+    "db:migrate:prod": "dotenv -- drizzle-kit migrate",
     "dev": "react-router dev",
     "start": "wrangler dev",
     "deploy": "npm run build && wrangler deploy",

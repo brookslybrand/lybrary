@@ -1,3 +1,9 @@
-import { type RouteConfig, index } from "@react-router/dev/routes";
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+const routes = [index("routes/home.tsx")] satisfies RouteConfig;
+
+if (process.env.NODE_ENV === "development") {
+  routes.push(route("seed", "routes/seed.tsx"));
+}
+
+export default routes;
