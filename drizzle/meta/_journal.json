@@ -36,6 +36,13 @@
       "when": 1738163031012,
       "tag": "0004_natural_klaw",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1738251496073,
+      "tag": "0005_flimsy_firestar",
+      "breakpoints": true
     }
   ]
 }
