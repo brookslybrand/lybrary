@@ -6,20 +6,6 @@ import {
 } from "drizzle-orm/sqlite-core";
 import { relations } from "drizzle-orm";
 
-export const guestBook = sqliteTable("guest_book", {
-  id: integer().primaryKey({ autoIncrement: true }),
-  name: text().notNull(),
-  email: text().notNull().unique(),
-  message: text().notNull(),
-});
-
-export const users = sqliteTable("users", {
-  id: integer().primaryKey({ autoIncrement: true }),
-  firstName: text().notNull(),
-  email: text().notNull().unique(),
-  password: text().notNull(),
-});
-
 export const boardGames = sqliteTable("board_games", {
   id: integer().primaryKey({ autoIncrement: true }),
   name: text().notNull(),
