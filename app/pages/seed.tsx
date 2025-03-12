@@ -21,8 +21,8 @@ async function processBatch<T, R>(
   return results;
 }
 
-export async function loader() {
-  const db = database();
+export async function loader({ context }: Route.LoaderArgs) {
+  const db = database(context);
   const games = await db.query.boardGames.findMany({
     orderBy: (games) => games.name,
     with: {
@@ -41,8 +41,8 @@ export async function loader() {
   return { games, mechanisms: allMechanisms };
 }
 
-export async function action() {
-  const db = database();
+export async function action({ context }: Route.ActionArgs) {
+  const db = database(context);
 
   // Get existing games and mechanisms to avoid duplicates
   const existingGames = await db.query.boardGames.findMany({

@@ -1,6 +1,6 @@
+import { database } from "~/modules/db.server";
 import type { Route } from "./+types/home";
 import { Link } from "react-router";
-import { database } from "~/modules/db.server";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -13,8 +13,8 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export async function loader() {
-  const db = database();
+export async function loader({ context }: Route.LoaderArgs) {
+  const db = database(context);
 
   const games = await db.query.boardGames.findMany({
     columns: {

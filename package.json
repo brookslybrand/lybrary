@@ -14,35 +14,32 @@
     "deploy": "npm run build && wrangler deploy",
     "typecheck": "NODE_ENV=development react-router typegen && tsc -b"
   },
-  "overrides": {
-    "react-router": "0.0.0-experimental-beaa4f52a"
-  },
   "dependencies": {
-    "@react-router/node": "0.0.0-experimental-beaa4f52a",
-    "@react-router/serve": "0.0.0-experimental-beaa4f52a",
-    "@ryanflorence/async-provider": "^0.0.1",
+    "@react-router/node": "^7.3.0",
+    "@react-router/serve": "^7.3.0",
     "csv-parse": "^5.6.0",
-    "drizzle-orm": "^0.39.2",
-    "isbot": "^5.1.22",
+    "drizzle-orm": "^0.40.0",
+    "isbot": "^5.1.23",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "0.0.0-experimental-beaa4f52a"
+    "react-router": "^7.3.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250204.0",
-    "@react-router/dev": "0.0.0-experimental-beaa4f52a",
-    "@tailwindcss/vite": "^4.0.5",
+    "@cloudflare/vite-plugin": "^0.1.10",
+    "@cloudflare/workers-types": "^4.20250311.0",
+    "@react-router/dev": "^7.3.0",
+    "@tailwindcss/vite": "^4.0.13",
     "@types/node": "^22",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
     "better-sqlite3": "^11.8.1",
     "cross-env": "^7.0.3",
     "dotenv-cli": "^8.0.0",
-    "drizzle-kit": "^0.30.4",
-    "tailwindcss": "^4.0.5",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0",
+    "drizzle-kit": "^0.30.5",
+    "tailwindcss": "^4.0.13",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1",
     "vite-tsconfig-paths": "^5.1.4",
-    "wrangler": "^3.107.3"
+    "wrangler": "^3.114.1"
   }
 }

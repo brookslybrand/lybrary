@@ -1,28 +1,26 @@
-import { createRequestHandler } from "react-router";
+import {
+  createRequestHandler,
+  unstable_RouterContextProvider,
+} from "react-router";
 
-declare global {
-  interface CloudflareEnvironment extends Env {}
-}
+// @ts-expect-error - no types
+import * as build from "virtual:react-router/server-build";
 
-declare module "react-router" {
-  export interface AppLoadContext {
-    cloudflare: {
-      env: CloudflareEnvironment;
-      ctx: ExecutionContext;
-    };
-  }
-}
+import { adapterContext } from "~/modules/adapter-context";
 
-const requestHandler = createRequestHandler(
-  // @ts-expect-error - virtual module provided by React Router at build time
-  () => import("virtual:react-router/server-build"),
-  import.meta.env.MODE
-);
+const handler = createRequestHandler(build);
 
 export default {
-  fetch(request, env, ctx) {
-    return requestHandler(request, {
-      cloudflare: { env, ctx },
-    });
+  fetch(request: Request, env: Env) {
+    try {
+      const context = new Map([[adapterContext, env]]);
+      return handler(
+        request,
+        context as unknown as unstable_RouterContextProvider,
+      );
+    } catch (error) {
+      console.error(error);
+      return new Response("Internal Server Error", { status: 500 });
+    }
   },
-} satisfies ExportedHandler<CloudflareEnvironment>;
+};

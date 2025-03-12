@@ -2,8 +2,8 @@ import { Link } from "react-router";
 import { database } from "~/modules/db.server";
 import type { Route } from "./+types/game-details";
 
-export async function loader({ params }: Route.LoaderArgs) {
-  const db = database();
+export async function loader({ params, context }: Route.LoaderArgs) {
+  const db = database(context);
   const gameId = parseInt(params.gameId);
 
   if (isNaN(gameId)) {
