@@ -6,14 +6,14 @@ import {
 // @ts-expect-error - no types
 import * as build from "virtual:react-router/server-build";
 
-import { adapterContext } from "~/modules/adapter-context";
+import { cloudflareEnvContext } from "~/modules/cloudflare-env-context";
 
 const handler = createRequestHandler(build);
 
 export default {
   fetch(request: Request, env: Env) {
     try {
-      const context = new Map([[adapterContext, env]]);
+      const context = new Map([[cloudflareEnvContext, env]]);
       return handler(
         request,
         context as unknown as unstable_RouterContextProvider,

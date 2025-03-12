@@ -4,7 +4,7 @@
     "tailwind.config.ts",
     "vite.config.ts",
     "react-router.config.ts",
-    "app/modules/adapter-context.ts",
+    "app/modules/cloudflare-env-context.ts",
     "worker-configuration.d.ts"
   ],
   "compilerOptions": {

@@ -5,14 +5,14 @@ import {
   unstable_createContext,
   type unstable_RouterContextProvider,
 } from "react-router";
-import { adapterContext } from "./adapter-context";
+import { cloudflareEnvContext } from "./cloudflare-env-context";
 
 let dbContext = unstable_createContext<DrizzleD1Database<typeof schema>>();
 
 export let dbMiddleware: Route.unstable_MiddlewareFunction = async ({
   context,
 }) => {
-  let cloudflareEnv = context.get(adapterContext);
+  let cloudflareEnv = context.get(cloudflareEnvContext);
 
   let db = drizzle(cloudflareEnv.DB, {
     schema,
