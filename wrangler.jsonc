@@ -1,0 +1,19 @@
+{
+  // Configuration for Cloudflare Workers
+  "workers_dev": true,
+  "name": "lybrary",
+  "compatibility_date": "2024-11-18",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./workers/app.ts",
+  "assets": {
+    "directory": "./build/client/"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "lybrary",
+      "database_id": "b7e83663-36fe-4156-b046-6d5c4a511a3b",
+      "migrations_dir": "drizzle"
+    }
+  ]
+}
