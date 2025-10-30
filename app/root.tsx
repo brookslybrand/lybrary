@@ -12,7 +12,7 @@ import stylesheet from "./app.css?url";
 
 import { dbMiddleware } from "~/modules/db.server";
 
-export let unstable_middleware = [dbMiddleware];
+export let middleware = [dbMiddleware];
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
